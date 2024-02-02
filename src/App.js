@@ -1,15 +1,16 @@
-import './App.css';
-import Footer from './Footer';
-import Header from './Header';
-import News from './News';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import News from "./News";
+import React from "react";
+
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <News/>
-      <Footer/>
-    </div>
+    <React.Fragment className="App">
+      <Routes>
+        <Route path="/" element={<News />}></Route>
+      </Routes>
+    </React.Fragment>
   );
 }
 

@@ -26,6 +26,7 @@ const News = () => {
   }, [REQ_ULR]);
   //The dependency array ensures that useEffect runs only when the REQ_URL is called.
 
+  // Filtering data which is having Title,Image and Description.
   const validArticles = value.filter(
     (article) => article.title && article.urlToImage && article.description
   );
